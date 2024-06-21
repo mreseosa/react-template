@@ -1,0 +1,26 @@
+import { NavLink } from "react-router-dom"
+import { MdKeyboardBackspace } from "react-icons/md";
+import PropTypes from 'prop-types';
+
+const Back = ({ title }) => {
+   return (
+      <div className='flex items-center justify-between max-w-[420px] mb-7 px-3 mt-2'>
+         <NavLink
+            to="/account"
+         >
+            <MdKeyboardBackspace 
+               className='text-xl'
+            />
+         </NavLink>
+         <h1 className='text-[1.-8rem] font-bold font-Nunito'>{title}</h1>
+         <div className='p-2'></div>
+      </div>
+   )
+}
+
+// Prop validation using PropTypes
+Back.propTypes = {
+   title: PropTypes.string.isRequired,
+};
+
+export default Back

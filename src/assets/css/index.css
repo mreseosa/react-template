@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Lato&family=Nunito&family=Nunito+Sans&family=Lugrasimo&family=Borel&family=Dancing+Script&family=Open+Sans&family=Poppins&family=Roboto&family=Roboto+Condensed&family=Roboto+Flex:opsz@8..144&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   background-color: #FFFFFF;
+   /* background-color: whitesmoke; */
+   overflow-y: hidden;
+   height: 100vh;
+   width: 100%;
+}
+
+/* Target the input field when autofilled */
+input:-webkit-autofill { 
+   /* Prevent background color change */
+   -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Change white to your background color */
+}
+
+.primaryGradient {
+   background: #090979;
+   background: linear-gradient(90deg, #090977 0%, #03a8fe 100%);
+}
+
+.leftGradient { 
+   background: rgb(9,9,121);
+   background: linear-gradient(to left, rgba(9,9,121,1) 0%, rgba(3,163,250,1) 100%);
+}
+
+.rightGradient {
+   background: rgb(9,9,121);
+   background: linear-gradient(to right, rgba(9,9,121,1) 0%, rgba(3,163,250,1) 100%);
+}
+
+nav li a.active {
+   color:  rgba(3,163,250,1);
+}
+
+.defaultMargin {
+   max-width: 1300px;
+   margin: auto;
+}
