@@ -1,9 +1,37 @@
-
+import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import Index from "./Pages/Index";
+import Missing from "./Pages/Missing";
 
 function App() {
 
+   const [project] = useState('VoteX')
+   const [unreadMessage] = useState(true)
+   
    return (
-      <h1 className='text-red-700'>Hello world</h1>
+      <>
+         <Routes>
+            <Route 
+               path="/" 
+               element={
+                  <Index
+                     project={project}
+                     title="Overview"
+                     unreadMessage={unreadMessage}
+                  />
+               }>
+            </Route>
+            <Route 
+               path="*" 
+               element={
+                  <Missing
+                     project={project}
+                     title="Page Not Found"
+                  />
+               }>
+            </Route>
+         </Routes>
+      </>
    )
 }
 
